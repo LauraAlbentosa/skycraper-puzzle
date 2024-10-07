@@ -6,7 +6,7 @@ const checkButtonElement = document.getElementById('check-button');
 
 
 const generateClues = () => {
-
+    
 }
 
 const solveBoard = clues => {
