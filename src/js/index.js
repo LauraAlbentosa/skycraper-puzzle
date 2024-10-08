@@ -6,6 +6,7 @@ const checkButtonElement = document.getElementById('check-button');
 
 
 const generateClues = () => {
+    console.log("hola");
     
 }
 
@@ -20,3 +21,5 @@ const emptyBoard = solution => {
 const checkAnswer = answer => {
     
 }
+
+generateClues();
