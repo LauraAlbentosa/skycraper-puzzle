@@ -4,9 +4,8 @@ import '../scss/styles.scss';
 const startButtonElement = document.getElementById('start-button');
 const checkButtonElement = document.getElementById('check-button');
 
-
+//Genero 4 arrays de 4 números cada uno.  
 const generateClues = () => {
-    console.log("hola");
     
 }
 
@@ -22,4 +21,3 @@ const checkAnswer = answer => {
     
 }
 
-generateClues();
