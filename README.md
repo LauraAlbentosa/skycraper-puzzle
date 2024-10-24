@@ -1,4 +1,4 @@
-# Título del proyecto
+# Skycraper Puzzle
 
 ![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
 
@@ -8,11 +8,17 @@
 
 ## Descripción 📑
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+Esto proyecto consiste en una implementación del puzzle "Skycraper Puzzle" de 4x4 usando javascript. Se trata de un sudoku en tres dimensiones, a diferencia del sudoku tradicional al usuario se le presenta un tablero vacío que debe rellenar con números del rango correspondiente (en este caso del 1 al 4) sin repetir ninguno. Para poder resolverlo se dan las vistas desde los distintos puntos de vista del tablero. 
+
+Por ejemplo:
+
+![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
+
+En este caso se sabe que desde arriba ... 
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, ipsum ipsam debitis ducimus dolorum placeat? Consectetur, soluta vero. Accusamus iure est pariatur, doloremque nam cumque natus unde adipisci laborum ut. At id sapiente consequatur earum. Magnam doloribus, voluptate zumito doloremque obcaecati vel excepturi numquam cupiditate ipsam quisquam!
+La clave para la realización del proyecto son la rescursividad y el backtracking, que es lo que permiten a la máquina resolver el puzzle para luego poder comprobar con las respuestas del usuario. 
 
 ## Tecnologías 🛠
 
@@ -31,10 +37,10 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ## Autor ✒️
 
-**TU NOMBRE**
+**Laura Albentosa Millor**
 
-- [micorreo@midominio.com](micorreo@midominio.com)
-- [LinkedIn](https://www.linkedin.com/in/tu-url-de-linkedin/)
+- [laura.albentosa.millor@gmail.com](laura.albentosa.millor@gmail.com)
+- [LinkedIn]([https://www.linkedin.com/in/tu-url-de-linkedin/](https://www.linkedin.com/in/laura-albentosa-millor-138484194/))
 
 ## Instalación
 
