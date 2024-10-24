@@ -1,6 +1,7 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { solvePuzzle, checkViews, validNumber } from './solvepuzzle';
+import { solvePuzzle } from './solvepuzzle'; //solo hay que importar a función principal
+import { generateViews } from './views';
 
 const startButtonElement = document.getElementById('start-button');
 const checkButtonElement = document.getElementById('check__button');
@@ -39,7 +40,8 @@ createBoard();
 */
 
 const size = 4;
-const views = [[2,1,2,2], [2,3,2,1], [1,2,2,2],[2,2,1,2]];
+const views = generateViews(); //up, left, down, right --- orden para las vistas
+console.table(views)
 const matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
 
 if(solvePuzzle(matrix, 0, 0, views))
