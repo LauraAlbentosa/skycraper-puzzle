@@ -3,7 +3,7 @@ import '../scss/styles.scss';
 import { createBoard, newGame } from './board';
 import { solvePuzzle } from './solvepuzzle'; //solo hay que importar a función principal
 import { generateViews } from './views';
-
+import { checkAnswer } from './checkanswers';
 
 const checkButtonElement = document.getElementById('check__button');
 const newGameButtonElement = document.getElementById('new_game__button');
@@ -39,3 +39,4 @@ createBoard();
 const views = newGame();
 newGameButtonElement.addEventListener('click', () => newGame());
 solvePuzzle(matrix, 0, 0, views);
+checkButtonElement.addEventListener('click', () => checkAnswer());
