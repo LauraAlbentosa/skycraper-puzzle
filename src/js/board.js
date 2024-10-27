@@ -7,6 +7,8 @@ const viewsLeftElement = document.getElementById('views_left');
 const viewsRightElement = document.getElementById('views_right');
 const startButtonElement = document.getElementById('start-button');
 
+
+
 export const createBoard = () =>
 {
     const fragment = document.createDocumentFragment();
@@ -29,8 +31,14 @@ export const createBoard = () =>
     boardContainer.append(fragment);
 }
 
-export const newGame = (views) =>
+export const newGame = () =>
 {
+    viewsUpElement.textContent = "";
+    viewsDownElement.textContent = "";
+    viewsLeftElement.textContent = "";
+    viewsRightElement.textContent = "";
+    
+    const views = generateViews();
     const fragment1 = document.createDocumentFragment();
     for (let i = 0; i < views[0].length; i++)
     {
@@ -61,11 +69,23 @@ export const newGame = (views) =>
     {
         const newDiv = document.createElement('div');
         const newText = document.createElement('p');  
-        newDiv.classList.add('views_hor__text');
+        newDiv.classList.add('views_ver__text');
         newDiv.append(newText);
         newText.textContent = views[1][i];
         fragment3.append(newDiv);
     }
     viewsLeftElement.append(fragment3);
+
+    const fragment4 = document.createDocumentFragment();
+    for (let i = 0; i < views[3].length; i++)
+    {
+        const newDiv = document.createElement('div');
+        const newText = document.createElement('p');  
+        newDiv.classList.add('views_ver__text');
+        newDiv.append(newText);
+        newText.textContent = views[3][i];
+        fragment4.append(newDiv);
+    }
+    viewsRightElement.append(fragment4);
     return views;
 }

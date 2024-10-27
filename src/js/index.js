@@ -31,10 +31,11 @@ createBoard();
 */
 
 const size = 4;
-const views = generateViews(); //up, left, down, right --- orden para las vistas
-console.table(views)
+//const views = generateViews(); //up, left, down, right --- orden para las vistas
+//console.table(views)
 const matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
 
 createBoard();
-newGame(views);
+const views = newGame();
+newGameButtonElement.addEventListener('click', () => newGame());
 solvePuzzle(matrix, 0, 0, views);
