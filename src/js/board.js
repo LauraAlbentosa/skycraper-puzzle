@@ -1,4 +1,11 @@
-const boardContainer = document.getElementById('container');
+import { generateViews } from "./views";
+
+const boardContainer = document.getElementById('board');
+const viewsUpElement = document.getElementById('views_up');
+const viewsDownElement = document.getElementById('views_down');
+const viewsLeftElement = document.getElementById('views_left');
+const viewsRightElement = document.getElementById('views_right');
+const startButtonElement = document.getElementById('start-button');
 
 export const createBoard = () =>
 {
@@ -20,4 +27,45 @@ export const createBoard = () =>
         fragment.append(newRow);
     }
     boardContainer.append(fragment);
+}
+
+export const newGame = (views) =>
+{
+    const fragment1 = document.createDocumentFragment();
+    for (let i = 0; i < views[0].length; i++)
+    {
+        const newDiv = document.createElement('div');
+        const newText = document.createElement('p');
+        newDiv.classList.add('views_hor__text');
+        newDiv.append(newText);
+        newText.textContent = views[0][i];
+        fragment1.append(newDiv);
+    }
+    
+    viewsUpElement.append(fragment1);
+
+    const fragment2 = document.createDocumentFragment();
+    for (let i = 0; i < views[2].length; i++)
+    {
+        const newDiv = document.createElement('div');
+        const newText = document.createElement('p');  
+        newDiv.classList.add('views_hor__text');
+        newDiv.append(newText);
+        newText.textContent = views[2][i];
+        fragment2.append(newDiv);
+    }
+    viewsDownElement.append(fragment2);
+
+    const fragment3 = document.createDocumentFragment();
+    for (let i = 0; i < views[1].length; i++)
+    {
+        const newDiv = document.createElement('div');
+        const newText = document.createElement('p');  
+        newDiv.classList.add('views_hor__text');
+        newDiv.append(newText);
+        newText.textContent = views[1][i];
+        fragment3.append(newDiv);
+    }
+    viewsLeftElement.append(fragment3);
+    return views;
 }
