@@ -5,7 +5,9 @@ const viewsUpElement = document.getElementById('views_up');
 const viewsDownElement = document.getElementById('views_down');
 const viewsLeftElement = document.getElementById('views_left');
 const viewsRightElement = document.getElementById('views_right');
+const finishPopUpElement = document.getElementById('finish');
 const startButtonElement = document.getElementById('start-button');
+const checkButtonElement = document.getElementById('check__button');
 
 
 
@@ -89,3 +91,19 @@ export const newGame = () =>
     viewsRightElement.append(fragment4);
     return views;
 }
+
+export const newBoard = () =>
+{
+    const inputs = document.querySelectorAll('input');
+    finishPopUpElement.textContent = "";
+    finishPopUpElement.classList.remove('d-flex');
+    checkButtonElement.disabled = false;
+    for (let i = 0; i < inputs.length; i ++)
+    {
+        inputs[i].value = "";
+        inputs[i].classList.remove('green');
+        inputs[i].classList.remove('red');
+    }
+
+}
+

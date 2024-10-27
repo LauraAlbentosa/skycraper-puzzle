@@ -3,40 +3,25 @@ import '../scss/styles.scss';
 import { createBoard, newGame } from './board';
 import { solvePuzzle } from './solvepuzzle'; //solo hay que importar a función principal
 import { generateViews } from './views';
-import { checkAnswer } from './checkanswers';
+import { checkAnswer, generateAnswersMatrix } from './checkanswers';
+import { newBoard } from './board';
+
 
 const checkButtonElement = document.getElementById('check__button');
 const newGameButtonElement = document.getElementById('new_game__button');
 
-//Genero 4 arrays de 4 números cada uno.  
 
-/*
-let correctBoard = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-const checkAnswer = (correctBoard) =>
-{
-    const answers = document.querySelectorAll('input');
-    for (let i = 0; i < answers.length; i++)
-    {
-        if (answers[i].value === correctBoard[i])
-        {
-            console.log(answers[i].value);
-            answers[i].classList.add('green');
-        }
-    }
-}
-
-createBoard();
-//checkButtonElement.addEventListener('click', checkAnswer(correctBoard));
-//checkAnswer();
-*/
 
 const size = 4;
-//const views = generateViews(); //up, left, down, right --- orden para las vistas
-//console.table(views)
-const matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
-
-createBoard();
 const views = newGame();
+let matrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+let newMatrix = [];
+let answersMatrix = [];
+
+newMatrix = solvePuzzle(matrix, 0, 0, views);
+console.table(newMatrix);
+//answersMatrix = generateAnswersMatrix();
+createBoard();
 newGameButtonElement.addEventListener('click', () => newGame());
-solvePuzzle(matrix, 0, 0, views);
-checkButtonElement.addEventListener('click', () => checkAnswer());
+newGameButtonElement.addEventListener('click', () => newBoard());
+checkButtonElement.addEventListener('click', () => checkAnswer(newMatrix));

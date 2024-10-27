@@ -98,7 +98,7 @@ export const solvePuzzle = (matrix, row, col, views) =>
         {
             matrix[row][col] = num;
             if (solvePuzzle(matrix, row, col + 1, views))
-                return true;
+                return matrix;
             matrix[row][col] = 0;
         }
     }
